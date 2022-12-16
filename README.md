@@ -8,11 +8,6 @@
 ___A program for calculating the fill of pdf layout files___
 
 The program was developed for the printing house to improve the speed for calculating the filling of pdf files.
-It was made in C# Windows Forms on the pattern:
-MVVM is a development pattern that allows you to divide the application into three functional parts:
-Model — the main logic of the program (working with data, calculations, queries, and so on)
-View — view or view (user interface)
-ViewModel is a view model that serves as a layer between View and Model
 Advantage of the program:
 - The ability to select several files for calculating the fill and checks with the table that was copied in advance;
 - Checks the dimensions with the table;
@@ -30,11 +25,6 @@ ___File Scanning interface___
 ___Программа для расчета заливки файлов pdf макетов___
 
 Программа была разработана для типографии, чтоб улучшить скорость для расчета заливки файлов pdf.
-Сделана была на C# Windows Forms на паттерне:
-MVVM — это паттерн разработки, позволяющий разделить приложение на три функциональные части:
-Model — основная логика программы (работа с данными, вычисления, запросы и так далее)
-View — вид или представление (пользовательский интерфейс)
-ViewModel — модель представления, которая служит прослойкой между View и Model
 Преимущество программы:
 - Возможность выбрать несколько файлов для расчета заливки и сверяет с таблицей которую заранее скопировали;
 - Сверяет размеры с таблицей;
