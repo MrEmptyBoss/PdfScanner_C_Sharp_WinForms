@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PdfSacannerAlfaVersion.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="GoogleToken" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">{"installed":{"client_id":"373317790402-c7ff4oms4digms6cm3uhg1jc6s3oimmf.apps.googleusercontent.com","project_id":"excellenta","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_secret":"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","redirect_uris":["http://localhost"]}}</Value>
+    </Setting>
+    <Setting Name="SheetFileName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Lenta_general_report</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
