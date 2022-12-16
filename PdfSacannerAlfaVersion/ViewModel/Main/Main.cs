@@ -41,8 +41,6 @@ namespace PdfSacannerAlfaVersion.View.Main
                     XmlSerializer serializer = new XmlSerializer(typeof(SettingsConfig));
                     SettingsConfig settings = (SettingsConfig)serializer.Deserialize(stream);
                     lvl = Convert.ToInt32(settings.Lvl);
-                    urlavatar = settings.urlavatar;
-                    NameText.Text = $"{settings.Surname} {settings.Name}";
                     
 
                 }
@@ -302,11 +300,6 @@ namespace PdfSacannerAlfaVersion.View.Main
         private void Main_Load(object sender, EventArgs e)
         {
             this.MinimumSize = new Size(1595,706);
-            System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
-            path.AddEllipse(0, 0, 60, 60);
-            Region rgn = new Region(path);
-            avatar.Region = rgn;
-            avatar.BackColor = System.Drawing.SystemColors.ActiveCaption;
         }
 
         private void ReportB_Click(object sender, EventArgs e)

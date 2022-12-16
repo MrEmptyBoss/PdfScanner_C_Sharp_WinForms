@@ -33,8 +33,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.PrBtn = new System.Windows.Forms.Button();
-            this.avatar = new System.Windows.Forms.PictureBox();
-            this.NameText = new System.Windows.Forms.Label();
             this.btnsver = new System.Windows.Forms.Button();
             this.btnrazv = new System.Windows.Forms.Button();
             this.btnclose = new System.Windows.Forms.Button();
@@ -42,13 +40,12 @@
             this.OpenFolderScanBt = new System.Windows.Forms.Button();
             this.borderPanel = new System.Windows.Forms.Panel();
             this.PanelDesk = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.CodeBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CodeBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.HeaderMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.avatar)).BeginInit();
             this.PanelDesk.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,8 +56,6 @@
             this.HeaderMain.Controls.Add(this.button2);
             this.HeaderMain.Controls.Add(this.button1);
             this.HeaderMain.Controls.Add(this.PrBtn);
-            this.HeaderMain.Controls.Add(this.avatar);
-            this.HeaderMain.Controls.Add(this.NameText);
             this.HeaderMain.Controls.Add(this.btnsver);
             this.HeaderMain.Controls.Add(this.btnrazv);
             this.HeaderMain.Controls.Add(this.btnclose);
@@ -115,29 +110,6 @@
             this.PrBtn.Text = "О программе";
             this.PrBtn.UseVisualStyleBackColor = true;
             this.PrBtn.Click += new System.EventHandler(this.PrBtn_Click);
-            // 
-            // avatar
-            // 
-            this.avatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.avatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.avatar.Location = new System.Drawing.Point(1225, 54);
-            this.avatar.Name = "avatar";
-            this.avatar.Size = new System.Drawing.Size(60, 60);
-            this.avatar.TabIndex = 1;
-            this.avatar.TabStop = false;
-            // 
-            // NameText
-            // 
-            this.NameText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.NameText.AutoSize = true;
-            this.NameText.Font = new System.Drawing.Font("Open Sans SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.NameText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.NameText.Location = new System.Drawing.Point(1301, 69);
-            this.NameText.Name = "NameText";
-            this.NameText.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.NameText.Size = new System.Drawing.Size(58, 27);
-            this.NameText.TabIndex = 9;
-            this.NameText.Text = "ФИО";
             // 
             // btnsver
             // 
@@ -238,43 +210,19 @@
             this.PanelDesk.Size = new System.Drawing.Size(1543, 552);
             this.PanelDesk.TabIndex = 1;
             // 
-            // pictureBox1
+            // label2
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(16)))));
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(697, 235);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // CodeBox
-            // 
-            this.CodeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(35)))));
-            this.CodeBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CodeBox.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold);
-            this.CodeBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.CodeBox.Location = new System.Drawing.Point(17, 501);
-            this.CodeBox.Name = "CodeBox";
-            this.CodeBox.Size = new System.Drawing.Size(641, 22);
-            this.CodeBox.TabIndex = 13;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.label1.Location = new System.Drawing.Point(12, 450);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(288, 27);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Код доступа для разработки";
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Open Sans SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.label2.Location = new System.Drawing.Point(1145, 515);
+            this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label2.Size = new System.Drawing.Size(378, 27);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Разработал программу Savichev Daniil";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button3
             // 
@@ -291,19 +239,43 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label2
+            // label1
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Open Sans SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.label2.Location = new System.Drawing.Point(1145, 515);
-            this.label2.Name = "label2";
-            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(378, 27);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Разработал программу Savichev Daniil";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Open Sans SemiBold", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.label1.Location = new System.Drawing.Point(12, 450);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(288, 27);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Код доступа для разработки";
+            // 
+            // CodeBox
+            // 
+            this.CodeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(35)))));
+            this.CodeBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CodeBox.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold);
+            this.CodeBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.CodeBox.Location = new System.Drawing.Point(17, 501);
+            this.CodeBox.Name = "CodeBox";
+            this.CodeBox.Size = new System.Drawing.Size(641, 22);
+            this.CodeBox.TabIndex = 13;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(16)))));
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(697, 235);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // Main
             // 
@@ -320,8 +292,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.Main_Load);
             this.HeaderMain.ResumeLayout(false);
-            this.HeaderMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.avatar)).EndInit();
             this.PanelDesk.ResumeLayout(false);
             this.PanelDesk.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -338,8 +308,6 @@
         private System.Windows.Forms.Button btnrazv;
         private System.Windows.Forms.Button btnclose;
         private System.Windows.Forms.Panel borderPanel;
-        private System.Windows.Forms.Label NameText;
-        private System.Windows.Forms.PictureBox avatar;
         private System.Windows.Forms.Button ReportB;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button PrBtn;
