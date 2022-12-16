@@ -347,19 +347,19 @@ namespace PdfSacannerAlfaVersion.View.Main
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if(CodeBox.Text == "oHVic3wD1pSFqYu6RiXCpXPY9waNBhNQ34EhfvaetqLHOMkfGtVh2S")
-            {
-                OpenFolderScanBt.Enabled = true;
-                button2.Enabled = true;
-            }
-            else
-            {
-                OpenFolderScanBt.Enabled = false;
-                button2.Enabled = false;
-            }
-        }
+        //private void button3_Click(object sender, EventArgs e)
+        //{
+        //    if(CodeBox.Text == "oHVic3wD1pSFqYu6RiXCpXPY9waNBhNQ34EhfvaetqLHOMkfGtVh2S")
+        //    {
+        //        OpenFolderScanBt.Enabled = true;
+        //        button2.Enabled = true;
+        //    }
+        //    else
+        //    {
+        //        OpenFolderScanBt.Enabled = false;
+        //        button2.Enabled = false;
+        //    }
+        //}
 
         private void label2_Click(object sender, EventArgs e)
         {
