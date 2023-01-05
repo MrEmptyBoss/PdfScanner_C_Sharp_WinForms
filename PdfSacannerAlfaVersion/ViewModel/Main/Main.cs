@@ -28,7 +28,6 @@ namespace PdfSacannerAlfaVersion.View.Main
         private Form currentChildForm;
         public List<Files> files = new List<Files>();
         public int lvl { get; set; }
-        public string urlavatar { get; set; }
 
         private void LoadSettingsSerializer()
         {
@@ -56,21 +55,8 @@ namespace PdfSacannerAlfaVersion.View.Main
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             LoadSettingsSerializer();
             this.Load += new EventHandler(Main_Load);
-            //Image image = GetImageFromPicPath(urlavatar);
-            //avatar.BackgroundImage = image;
-            //avatar.BackgroundImageLayout = ImageLayout.Stretch;
 
         }
-        //public static Image GetImageFromPicPath(string strUrl)
-        //{
-        //    using (WebResponse wrFileResponse = WebRequest.Create(strUrl).GetResponse())
-        //    using (Stream objWebStream = wrFileResponse.GetResponseStream())
-        //    {
-        //        MemoryStream ms = new MemoryStream();
-        //        objWebStream.CopyTo(ms, 8192);
-        //        return System.Drawing.Image.FromStream(ms);
-        //    }
-        //}
       
 
         private const int cGrip = 16;      // Grip size
@@ -167,7 +153,7 @@ namespace PdfSacannerAlfaVersion.View.Main
         #endregion
 
         #region ~~~Открытие проводника~~~
-        public string OpenDialog()  // Открытие проводника
+        public string openDialog()  // Открытие проводника
         {
             string fp = null;
 
@@ -209,7 +195,7 @@ namespace PdfSacannerAlfaVersion.View.Main
         {
             ScannerBuffer scannerBuffer = new ScannerBuffer();
             List<Buffer> filesBuffer = scannerBuffer.InfoBuffer();
-            string pt = OpenDialog();
+            string pt = openDialog();
             if (pt == null)
             {
                 MessageBox.Show("Вы не указали папку!");

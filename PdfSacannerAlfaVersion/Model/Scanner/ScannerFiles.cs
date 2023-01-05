@@ -18,14 +18,14 @@ namespace PdfSacannerAlfaVersion.Model.Scanner
     {
         public List<Files> InfoFiles(string path, ProgressBar progressBar1)
         {
-            List<Files> ListInfo = new List<Files>();
-            List<double> ListProcPages = new List<double>();
-            List<string> ListFailPages = new List<string>();
+            List<Files> listInfo = new List<Files>();
+            List<double> listProcPages = new List<double>();
+            List<string> listFailPages = new List<string>();
             int prog = 0;
 
             if (path == null)
             {
-                return ListInfo;
+                return listInfo;
             }
         
             string[] fileEntries = Directory.GetFiles(path);
@@ -43,11 +43,11 @@ namespace PdfSacannerAlfaVersion.Model.Scanner
                     Spire.Pdf.PdfDocument doc = new Spire.Pdf.PdfDocument();
                     doc.LoadFromFile(fileNames);
                     PdfPageBase page = doc.Pages[0];
-                    float pointWidth = page.Size.Width;
-                    float pointHeight = page.Size.Height;
+                    float pointwidth = page.Size.Width;
+                    float pointheight = page.Size.Height;
                     var point = 0.3527;
-                    int Height = Convert.ToInt32(Math.Round(pointHeight * point));
-                    int Width = Convert.ToInt32(Math.Round(pointWidth * point));
+                    int height = Convert.ToInt32(Math.Round(pointheight * point));
+                    int width = Convert.ToInt32(Math.Round(pointwidth * point));
                     var namef = Path.GetFileName(fileNames);
                     pdfReader.Close();
                     //Start Fill Block
@@ -62,11 +62,11 @@ namespace PdfSacannerAlfaVersion.Model.Scanner
                         {
                             //bitmap.Save(string.Format("images/" + namef + "{0}.tif", i), ImageFormat.Tiff);
                             List<pixels> pixels = CountPixels(bitmap, Color.FromArgb(255, 255, 255, 255));
-                            ListProcPages.Add(Math.Round(obr(pixels[0].white_pixels, pixels[0].Pixels), 0));
-                            if (ListProcPages.Last() < 0.01)
+                            listProcPages.Add(Math.Round(obr(pixels[0].white_pixels, pixels[0].Pixels), 0));
+                            if (listProcPages.Last() < 0.01)
                             {
-                                string failPage = namef + " -  " + ListProcPages.Count + " страница повреждена";
-                                ListFailPages.Add(failPage);
+                                string failPage = namef + " -  " + listProcPages.Count + " страница повреждена";
+                                listFailPages.Add(failPage);
                             }
                         }
 
@@ -76,15 +76,15 @@ namespace PdfSacannerAlfaVersion.Model.Scanner
                     double resultZal;
                     for (int i = 0; i < document.Pages.Count; i++)
                     {
-                        tempZal = tempZal + ListProcPages[i];
+                        tempZal = tempZal + listProcPages[i];
                     }
 
                     resultZal = tempZal / document.Pages.Count;
 
                     //End Fill Block
-                    var info = new Files { path = namef, zal = resultZal, Height = Height, Width = Width, col = numberOfPages, color = 0, FailPages = ListFailPages };
-                    ListInfo.Add(info);
-                    ListProcPages.Clear();
+                    var info = new Files { path = namef, zal = resultZal, Height = height, Width = width, col = numberOfPages, color = 0, FailPages = listFailPages };
+                    listInfo.Add(info);
+                    listProcPages.Clear();
                     fs.Close();
                 }
 
@@ -92,9 +92,9 @@ namespace PdfSacannerAlfaVersion.Model.Scanner
                 {
                     var nameff = Path.GetFileName(fileNames);
                     var info = new Files { path = nameff, Height = 0, Width = 0, col = 0, povf = 0, color = 1 };
-                    ListInfo.Add(info);
+                    listInfo.Add(info);
                     MessageBox.Show("Файл поврежден: " + nameff);
-                    ListInfo[0].povf++;
+                    listInfo[0].povf++;
 
                 }
 
@@ -102,7 +102,7 @@ namespace PdfSacannerAlfaVersion.Model.Scanner
                 progressBar1.Value = prog;
 
             };
-            return ListInfo;
+            return listInfo;
         }
 
         class pixels

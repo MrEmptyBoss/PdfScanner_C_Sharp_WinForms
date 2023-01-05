@@ -14,7 +14,7 @@ namespace PdfSacannerAlfaVersion.Model.Scanner
     {
         public List<Buffer> InfoBuffer()
         {
-            List<Buffer> filess = new List<Buffer>();
+            List<Buffer> files = new List<Buffer>();
 
             string ish = Clipboard.GetText();
 
@@ -47,36 +47,36 @@ namespace PdfSacannerAlfaVersion.Model.Scanner
                 }
             }
 
-            int files = spisokmus.Count / 4;
+            int filesCount = spisokmus.Count / 4;
 
-            for (int i = 0; i < files; i++)
+            for (int i = 0; i < filesCount; i++)
             {
                 Buffer files2 = new Buffer() { nameValue = spisokmus[0 + 0], 
                     dlinaValue = spisokmus[0 + 1],
                     shirValue = spisokmus[0 + 2],
                     colValue = spisokmus[0 + 3] };
-                filess.Add(files2);
+                files.Add(files2);
                 spisokmus.RemoveRange(0, 4);
             }
             #region ~~Сортировка по алфавиту~~~
-            filess.Sort(delegate (Buffer name, Buffer name2)
+            files.Sort(delegate (Buffer name, Buffer name2)
             { return name.nameValue.CompareTo(name2.nameValue); });
             #endregion
-            for (int i = 0; i < filess.Count; i++)
+            for (int i = 0; i < files.Count; i++)
             {
-                string musor1 = filess[i].colValue;
-                string musor2 = filess[i].dlinaValue;
-                string musor3 = filess[i].shirValue;
+                string musor1 = files[i].colValue;
+                string musor2 = files[i].dlinaValue;
+                string musor3 = files[i].shirValue;
                 string res1 = Regex.Replace(musor1, @"\D+", "");
                 string res2 = Regex.Replace(musor2, @"\D+", "");
                 string res3 = Regex.Replace(musor3, @"\D+", "");
-                filess[i].colValue = res1;
-                filess[i].dlinaValue = res2;
-                filess[i].shirValue = res3;
+                files[i].colValue = res1;
+                files[i].dlinaValue = res2;
+                files[i].shirValue = res3;
 
             }
 
-            return filess;
+            return files;
 
         }
     }
