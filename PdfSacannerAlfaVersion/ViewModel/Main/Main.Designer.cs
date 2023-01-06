@@ -40,7 +40,6 @@
             this.OpenFolderScanBt = new System.Windows.Forms.Button();
             this.borderPanel = new System.Windows.Forms.Panel();
             this.PanelDesk = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.HeaderMain.SuspendLayout();
             this.PanelDesk.SuspendLayout();
@@ -195,26 +194,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelDesk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(16)))));
-            this.PanelDesk.Controls.Add(this.label2);
             this.PanelDesk.Controls.Add(this.pictureBox1);
             this.PanelDesk.Location = new System.Drawing.Point(18, 120);
             this.PanelDesk.Name = "PanelDesk";
             this.PanelDesk.Size = new System.Drawing.Size(1543, 552);
             this.PanelDesk.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Open Sans SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.label2.Location = new System.Drawing.Point(1145, 515);
-            this.label2.Name = "label2";
-            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(378, 27);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Разработал программу Savichev Daniil";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 
@@ -246,7 +230,6 @@
             this.Load += new System.EventHandler(this.Main_Load);
             this.HeaderMain.ResumeLayout(false);
             this.PanelDesk.ResumeLayout(false);
-            this.PanelDesk.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -266,6 +249,5 @@
         private System.Windows.Forms.Button PrBtn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label2;
     }
 }

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace PdfSacannerAlfaVersion.Model.DB
 {
+    // Раньше использовалось для авторазиции, убрал ее временно)
     class DB
     {
         MySqlConnection connection = new MySqlConnection("server=sql4.freesqldatabase.com; username=sql4480218; password=VNhx3r9tYc; database=sql4480218");
